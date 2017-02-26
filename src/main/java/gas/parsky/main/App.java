@@ -25,15 +25,7 @@ public class App
         AccountHolder ah;
         AbstractAccount abs;
 
-        // loop for each bank's list accounts item ->
         for (int i = 0; i < Martinka.getMaxAccounts(); i++) {
-
-
-            /* each item of the account's list has :
-                -> a account holder
-                    -> which has either an save account or a curent account
-                       -> each account is appied 5 operations
-            */
 
             ah = new AccountHolder(account_holder + i);
 
@@ -43,9 +35,6 @@ public class App
                 abs = new SaveAccount(ah, getRandomNumberInRange(250, 500)*1f , 0.01f);
             }
 
-            /*  each account is applied 5 operations
-                    5 x ( 1 deposit and 1 withdraw -> amount range -250 -> + 500)
-            */
             for (int k = 0; k < 5; k++) {
 
                 // *********************************************************************
